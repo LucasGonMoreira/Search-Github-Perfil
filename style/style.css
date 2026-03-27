@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100dvh;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.cabecalho {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.conteudo-principal {
+  height: 100%;
+  background-color: #e4e4e4;
+}
+
