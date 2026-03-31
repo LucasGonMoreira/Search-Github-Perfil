@@ -21,5 +21,78 @@ html {
 .conteudo-principal {
   height: 100%;
   background-color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
+.oculto{
+  display: none;
+}
+
+
+#avatar{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%
+}
+
+.utilitario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container-pesquisa{
+  gap: 1rem;
+  padding-top: 20px;
+}
+
+.container-input{
+  border: 1px solid blue;
+  border-radius: 12px;
+  padding: .5rem 1rem;
+  gap: .5rem;
+}
+
+#input-usuario{
+  border: none; 
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+#pesquisar-btn{
+  background-color: blue;
+  color: white;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#pesquisar-btn:hover{
+  background-color: rgb(0, 5, 142);
+}
+
+i {
+  color: blue;
+}
+
+
+.resultado{
+  background-color: white;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.355);
+}
+
+.container-resultado{
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  gap: 2rem;
+}

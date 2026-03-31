@@ -16,9 +16,11 @@
     <p>Busque o perfil do github de forma prática!</p>
   </header>
   <main class="conteudo-principal">
-    <section>
-      <div>
-        <div>
+    <section class="sessao-pesquisa">
+      <div class="container-pesquisa utilitario">
+        <div class="container-input utilitario">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" name="input-usuario" id="input-usuario" placeholder="Digite o nome do usuário">
         </div>
         <button id="pesquisar-btn">Pesquisar</button>
@@ -26,40 +28,40 @@
     </section>
     <section>
       <div class="resultado">
-        <div>
+        <div class="container-resultado utilitario">
           <picture>
-            <img src="" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1udJ5Fgygvma--f_olSXXfrsWQWuRMdA81Q&s" alt="" id="avatar">
           </picture>
 
           <div>
-            <h3>João</h3>
-            <p>joaozinho123</p>
+            <h3 id="nome">João</h3>
+            <p id ="usuario">joaozinho123</p>
           </div>
 
           <div>
-            <p>Biografia do usuário</p>
+            <p id="biografia ">Biografia do usuário</p>
           </div>
 
           <div>
             <div>
-              <h2>50</h2>
-              <p>Repositórios</p>
+              <h2 id="qtdeRepositorios">50</h2>
+              <p id="repositorios">Repositórios</p>
             </div>
             <div>
-              <h2>50</h2>
-              <p>Seguidores</p>
+              <h2 id="qtdeSeguidores">50</h2>
+              <p id="seguidores">Seguidores</p>
             </div>
             <div>
-              <h2>50</h2>
-              <p>Seguindo</p>
+              <h2 id="qtdeSeguindo">50</h2>
+              <p id="seguindo">Seguindo</p>
             </div>
           </div>
 
-          <a href="#">Ver blog</a>
+          <a href="#" id="blog">Ver blog</a>
         </div>
       </div>
-      <div class="carregando">
-        <p>Carregando...</p>
+      <div class="carregando oculto">
+        <p >Carregando...</p>
       </div>
       <div class="erro"></div>
     </section>
