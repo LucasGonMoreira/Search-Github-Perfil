@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+
+
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.oculto {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabecalho {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.conteudo-principal {
+  min-height: 100vh;
+  background-color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#avatar {
+  height: 100px;
+  width: 100px;
+}
+
+.container-pesquisa {
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.container-input {
+  border: 1px solid #1a6fe6;
+  border-radius: 12px;
+  padding: .5rem 1rem;
+  gap: .5rem;
+}
+
+#input-usuario {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+#pesquisar-btn {
+  padding: .5rem 1rem;
+  color: #fff;
+  background-color: #1a6fe6;
+  border: none;
+  border-radius: 12px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#pesquisar-btn:hover {
+  background-color: #1561cc;
+}
+
+i {
+  color: #5c5c5c;
+}
+
+.resultado {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 0 10px #00000031;
+}
+
+.container-resultado {
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-status {
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#blog {
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+  background-color: #1a6fe6;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  border: 2px solid #000;
+}
+
+#blog:hover {
+  transform: scale(1.03);
+  color: #000;
+  background-color: transparent;
+}
+
+.container-biografia {
+  margin-top: 1rem;
+}
+
+#usuario {
+  color: #1a6fe6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repositorios{
+  margin-top: 1rem;
+  width: 400px;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.repositorios-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem
+}
+
+#opcoes{
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  color: #1a6fe6;
+  cursor: pointer;
+}
+
+#opcoes option{
+  background-color: transparent;
+  border: none;
+  color: #1a6fe6;
+}
+.container-repositorios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.container-repositorios div{
+  box-shadow: 0 0 10px #00000031;
+  padding: .1rem;
+  border-radius: 12px;
+  background-color: rgba(128, 128, 128, 0.068);
+}
+
+.descricao-repositorio{
+  color: gray;
+}
+
+.linguagem-repositorio {
+  color: blue;
+}
+
+.home{
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+}
