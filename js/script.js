@@ -27,7 +27,7 @@ async function getInformacoesGithub(username) {
         throw new Error("Usuário não encontrado");
       }
 
-      throw new Error("Erro ao buscar usuário");
+      throw new Error("Erro ao buscar usuário, muitas requisições feitas, tente novamente mais tarde");
     }
 
     const usuario = await resposta.json();
@@ -35,6 +35,9 @@ async function getInformacoesGithub(username) {
   } catch(error) {
     console.log(error);
     containerErro.textContent = error.message;
+    containerErro.classList.remove('oculto');
+    containerResultado.classList.add('oculto');
+    containerCarregando.classList.add('oculto');
   } finally {
     containerCarregando.classList.add('oculto');
   }
@@ -44,7 +47,9 @@ async function getInformacoesGithub(username) {
 
 
 async function getRepostoriosGithub(username, listOpcoes) {
-  const resposta = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=${listOpcoes}`)
+  const resposta = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=${listOpcoes}`)
+
+  console.log(resposta.status)
 
   if (!resposta.ok) {
       if (resposta.status === 400) {
