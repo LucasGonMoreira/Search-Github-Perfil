@@ -103,7 +103,7 @@ function exibirInformacoesUsuario(usuario) {
   qtdeRepositorios.textContent = usuario.public_repos;
   qtdeSeguidores.textContent = usuario.followers;
   qtdeSeguindo.textContent = usuario.following;
-  blog.href = usuario.blog || "#" ;
+  blog.href = `https://${usuario.blog }`|| "#" ;
   blog.textContent = "Ver blog" || "Blog não encontrado";
 
     containerResultado.classList.remove('oculto');
