@@ -32,7 +32,7 @@ async function getInformacoesGithub(username) {
 
     const usuario = await resposta.json();
     exibirInformacoesUsuario(usuario);
-  } catch(error) {
+  } catch (error) {
     console.log(error);
     containerErro.textContent = error.message;
     containerErro.classList.remove('oculto');
@@ -52,12 +52,12 @@ async function getRepostoriosGithub(username, listOpcoes) {
   console.log(resposta.status)
 
   if (!resposta.ok) {
-      if (resposta.status === 400) {
-        throw new Error("Usuário não encontrado");
-      }
-
-      throw new Error("Erro ao buscar usuário");
+    if (resposta.status === 400) {
+      throw new Error("Usuário não encontrado");
     }
+
+    throw new Error("Erro ao buscar usuário");
+  }
 
   const repositorios = await resposta.json();
   exibirRepositorios(repositorios);
@@ -68,7 +68,7 @@ async function getRepostoriosGithub(username, listOpcoes) {
 
 function exibirRepositorios(repositorios) {
   containerRepositorios.innerHTML = "";
-  
+
   repositorios.forEach(repositorio => {
     const divCard = document.createElement('div');
 
@@ -103,10 +103,19 @@ function exibirInformacoesUsuario(usuario) {
   qtdeRepositorios.textContent = usuario.public_repos;
   qtdeSeguidores.textContent = usuario.followers;
   qtdeSeguindo.textContent = usuario.following;
-  blog.href = `https://${usuario.blog }`|| "#" ;
-  blog.textContent = "Ver blog" || "Blog não encontrado";
+  if (usuario.blog) {
+    const urlBlog = usuario.blog.startsWith('http') ? usuario.blog : `https://${usuario.blog}`;
+    blog.href = urlBlog;
+    blog.textContent = "Visitar blog";
+    blog.target = '_blank'
+    blog.style.display = "inline-block";
+  } else {
+    blog.textContent = "Blog não disponível";
+    blog.href = "#";
+    blog.style.display = "none";
+  }
 
-    containerResultado.classList.remove('oculto');
+  containerResultado.classList.remove('oculto');
 }
 
 
