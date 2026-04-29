@@ -71,7 +71,7 @@ function exibirRepositorios(repositorios) {
 
   repositorios.forEach(repositorio => {
     const divCard = document.createElement('div');
-
+    const Link = document.createElement('a');
     const title = document.createElement('h3');
     const desc = document.createElement('p');
     const language = document.createElement('p');
@@ -81,11 +81,15 @@ function exibirRepositorios(repositorios) {
     language.textContent = `Linguagem: ${repositorio.language || "Linguagem não encontrada"}`;
     desc.className = "descricao-repositorio";
     language.className = "linguagem-repositorio";
-
-
-    divCard.appendChild(title);
-    divCard.appendChild(desc);
-    divCard.appendChild(language);
+    Link.href = repositorio.html_url || "#";
+    Link.target = "_blank";
+    Link.style.textDecoration = "none";
+    
+    Link.appendChild(title);
+    Link.appendChild(desc);
+    Link.appendChild(language);
+    
+    divCard.appendChild(Link);
 
     containerRepositorios.appendChild(divCard);
   })
